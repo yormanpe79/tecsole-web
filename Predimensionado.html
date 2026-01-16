@@ -704,7 +704,7 @@
 
         <div class="lg:col-span-8 space-y-6">
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="kpi-card p-5 rounded-xl border-l-4 border-yellow-400">
                     <div class="flex justify-between items-start">
                         <div>
@@ -726,25 +726,6 @@
                                     class="bg-green-100 text-green-800 px-1 rounded font-bold">0%</span></p>
                         </div>
                         <i class="fas fa-chart-line text-2xl text-green-200"></i>
-                    </div>
-                </div>
-
-                <div class="kpi-card p-5 rounded-xl border-l-4 border-blue-600 bg-blue-50">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-xs text-blue-500 uppercase font-bold tracking-wider">Valor Oferta (CAPEX)</p>
-                            <h2 class="text-3xl font-bold text-blue-900" id="resInversion">$0</h2>
-                            <div id="infoCredito" class="hidden mt-2 pt-2 border-t border-blue-200">
-                                <p class="text-[10px] text-blue-600 uppercase font-bold">Plan Financiación:</p>
-                                <p class="text-xs text-slate-700 flex justify-between"><span>Inicial (Equity):</span>
-                                    <strong id="valEquity">$0</strong>
-                                </p>
-                                <p class="text-sm text-blue-800 flex justify-between mt-1"><span>Cuota Mes:</span>
-                                    <strong id="valCuota">$0</strong>
-                                </p>
-                            </div>
-                        </div>
-                        <i class="fas fa-tag text-2xl text-blue-200"></i>
                     </div>
                 </div>
             </div>
@@ -994,11 +975,12 @@
                 cuotaAnualDeuda = cuotaMes * 12;
 
                 // Mostrar Info Crédito
-                document.getElementById('infoCredito').classList.remove('hidden');
-                document.getElementById('valEquity').innerText = formatCOP.format(equity);
-                document.getElementById('valCuota').innerText = formatCOP.format(cuotaMes);
+                // Mostrar Info Crédito (Removed from UI)
+                // document.getElementById('infoCredito').classList.remove('hidden');
+                // document.getElementById('valEquity').innerText = formatCOP.format(equity);
+                // document.getElementById('valCuota').innerText = formatCOP.format(cuotaMes);
             } else {
-                document.getElementById('infoCredito').classList.add('hidden');
+                // document.getElementById('infoCredito').classList.add('hidden');
             }
 
             // FLUJO DE CAJA
@@ -1080,7 +1062,7 @@
             // Render UI
             document.getElementById('resPotencia').innerText = potInstaladaKw.toFixed(2) + " kWp";
             document.getElementById('resPaneles').innerText = numPaneles;
-            document.getElementById('resInversion').innerText = formatCOP.format(inversion);
+            // document.getElementById('resInversion').innerText = formatCOP.format(inversion); // Element removed
             document.getElementById('resPayback').innerText = payback > 0 ? payback.toFixed(1) + " Años" : ">25";
 
             let tir = calculateIRR([-equity, ...flujos.slice(1)]); // TIR sobre Equity
