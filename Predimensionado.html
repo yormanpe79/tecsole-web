@@ -525,10 +525,7 @@
                     title="Descargar Manual de Uso">
                     <i class="fas fa-book"></i> Manual de Uso
                 </a>
-                <button type="button" onclick="printPage()"
-                    class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-5 py-2 rounded-lg font-bold shadow-lg transition inline-flex items-center gap-2 text-sm">
-                    <i class="fas fa-file-pdf"></i> PDF / Imprimir
-                </button>
+                <!-- Button Removed -->
             </div>
         </div>
     </nav>
@@ -814,27 +811,7 @@
                 <div class="h-64 w-full"><canvas id="chartFlujo"></canvas></div>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 overflow-hidden break-after">
-                <h3 class="font-heading font-bold text-slate-800 mb-4 text-sm uppercase">Detalle Financiero (Proyección
-                    25 Años)</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-xs text-right border-collapse">
-                        <thead class="bg-slate-50 text-slate-600 uppercase font-semibold border-b border-slate-200">
-                            <tr>
-                                <th class="p-3 text-center">Año</th>
-                                <th class="p-3">Ahorro Energía</th>
-                                <th class="p-3 text-green-700 bg-green-50">Benef. Trib.</th>
-                                <th class="p-3 text-red-600">O&M</th>
-                                <th class="p-3 text-red-600 bg-red-50" id="colDeuda">Pago Deuda</th>
-                                <th class="p-3 font-bold bg-slate-100">Flujo Neto</th>
-                                <th class="p-3 font-bold">Acumulado</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaBody" class="text-slate-600 divide-y divide-slate-100"></tbody>
-                    </table>
-                </div>
-                <p class="text-[10px] text-gray-400 mt-3 italic">* Estudio preliminar sujeto a visita técnica.</p>
-            </div>
+            <!-- Table Removed -->
 
             <div class="print-only mt-8 pt-8 border-t-2 border-gray-200">
                 <div class="grid grid-cols-2 gap-8">
@@ -886,10 +863,10 @@
             const div = document.getElementById('divCredito');
             if (tipo === 'credito') {
                 div.classList.remove('hidden');
-                document.getElementById('colDeuda').style.display = 'table-cell';
+                // document.getElementById('colDeuda').style.display = 'table-cell'; // Element removed
             } else {
                 div.classList.add('hidden');
-                document.getElementById('colDeuda').style.display = 'none';
+                // document.getElementById('colDeuda').style.display = 'none'; // Element removed
             }
             calcularDimensionado();
         }
@@ -1067,7 +1044,7 @@
 
             let tir = calculateIRR([-equity, ...flujos.slice(1)]); // TIR sobre Equity
             document.getElementById('resTIR').innerText = (tir * 100).toFixed(1) + "% E.A.";
-            document.getElementById('tablaBody').innerHTML = htmlTabla;
+            // document.getElementById('tablaBody').innerHTML = htmlTabla; // Table removed
 
             // Ambiental
             let energiaVida = 0; for (let i = 1; i <= 25; i++) energiaVida += genAnual * Math.pow(0.9945, i - 1);
