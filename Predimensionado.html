@@ -3,43 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador Solar Expert - Colombia 2025</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Calculadora Solar Profesional Colombia - Simula tu proyecto fotovoltaico CREG 174. Calcula retorno de inversión, ahorro energético, TIR y proyección financiera a 25 años. Diseño por Yorman Peralta, Ingeniero Electricista.">
-    <meta name="keywords"
-        content="calculadora solar, fotovoltaica Colombia, CREG 174, retorno inversión solar, dimensionamiento solar, cotizador solar, paneles solares Colombia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Cotizador Solar Expert - Colombia 2026</title>
+    <meta name="description" content="Calculadora Solar Profesional Colombia.">
     <meta name="author" content="Yorman Peralta García">
-    <link rel="canonical" href="https://www.tecsole.com/Predimensionado.html">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tecsole.com/Predimensionado.html">
-    <meta property="og:title" content="Calculadora Solar Expert - Retorno de Inversión">
-    <meta property="og:description"
-        content="Simula tu proyecto solar fotovoltaico en Colombia. Calcula retorno de inversión, TIR y ahorro energético bajo CREG 174.">
-    <meta property="og:image" content="https://www.tecsole.com/Logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.tecsole.com/Predimensionado.html">
-    <meta property="twitter:title" content="Calculadora Solar Expert - Colombia">
-    <meta property="twitter:description"
-        content="Calcula el retorno de tu inversión solar con nuestra herramienta profesional.">
-    <meta property="twitter:image" content="https://www.tecsole.com/Logo.png">
-
-    <!-- PWA / Mobile -->
-    <meta name="theme-color" content="#0f172a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
-
-    <!-- Scripts and Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -47,6 +15,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="keywords"
+        content="calculadora solar, fotovoltaica, energía solar colombia, dimensionamiento solar, retorno inversión solar, tecsole, yorman peralta">
+    <link rel="canonical" href="https://www.tecsole.com/Predimensionado.html">
+    <meta name="theme-color" content="#0F172A">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tecsole.com/Predimensionado.html">
+    <meta property="og:title" content="Cotizador Solar Expert | TECSOLE">
+    <meta property="og:description"
+        content="Calculadora profesional de rentabilidad solar para Colombia. Análisis financiero completo bajo normativa CREG 174.">
+    <meta property="og:image" content="https://www.tecsole.com/Logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tecsole.com/Predimensionado.html">
+    <meta property="twitter:title" content="Cotizador Solar Expert | TECSOLE">
+    <meta property="twitter:description" content="Calculadora profesional de rentabilidad solar para Colombia.">
+    <meta property="twitter:image" content="https://www.tecsole.com/Logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="apple-touch-icon" href="Logo.png">
 
     <style>
         :root {
@@ -118,14 +111,13 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
-        /* Animación suave para el marranito */
         @keyframes float {
             0% {
                 transform: translateY(0px);
             }
 
             50% {
-                transform: translateY(-3px);
+                transform: translateY(-4px);
             }
 
             100% {
@@ -134,6 +126,7 @@
         }
 
         .piggy-animate {
+            display: inline-block;
             animation: float 3s ease-in-out infinite;
         }
 
@@ -187,15 +180,12 @@
                 margin-bottom: 30px;
             }
 
-            /* --- CORRECCIÓN BUG IMPRESIÓN TABLA --- */
-            /* 1. Forzar visibilidad del desbordamiento para que no corte la tabla */
             .overflow-x-auto,
             .overflow-hidden {
                 overflow: visible !important;
                 display: block !important;
             }
 
-            /* 2. Ajustes de la tabla para que quepa y pagíné bien */
             table {
                 width: 100% !important;
                 border-collapse: collapse;
@@ -206,24 +196,18 @@
                 display: table-header-group;
             }
 
-            /* Repite encabezados en nueva página */
             tr {
                 page-break-inside: avoid;
                 page-break-after: auto;
             }
 
-            /* Evita cortar filas por la mitad */
-
-            /* 3. Reducir fuente y espaciado para asegurar que quepan todas las columnas */
             th,
             td {
                 font-size: 7pt !important;
                 padding: 4px 2px !important;
                 white-space: nowrap;
-                /* Evita que el texto se rompa en varias lineas si no es necesario */
             }
 
-            /* 4. Limpiar estilos de contenedores que estorban en impresión */
             .shadow-sm {
                 box-shadow: none !important;
             }
@@ -235,255 +219,6 @@
 
         .print-only {
             display: none;
-        }
-
-        /* ===== RESPONSIVE MOBILE STYLES ===== */
-        @media (max-width: 768px) {
-
-            /* Navigation Mobile */
-            nav {
-                padding: 12px 3% !important;
-            }
-
-            nav .container {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav .flex.items-center.gap-3:first-child {
-                width: 100%;
-                justify-content: center;
-            }
-
-            nav .flex.items-center.gap-3:last-child {
-                width: 100%;
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            nav a,
-            nav button {
-                width: 100%;
-                justify-content: center;
-                font-size: 0.8rem !important;
-                padding: 10px 15px !important;
-            }
-
-            /* Main Grid Mobile */
-            .main-grid {
-                grid-template-columns: 1fr !important;
-                gap: 20px;
-            }
-
-            /* Form Section Mobile */
-            .bg-white.p-5 {
-                padding: 1rem !important;
-            }
-
-            .space-y-4>div,
-            .space-y-3>div {
-                margin-bottom: 0.75rem;
-            }
-
-            .grid.grid-cols-2 {
-                grid-template-columns: 1fr !important;
-                gap: 0.75rem;
-            }
-
-            /* KPI Cards Mobile */
-            .grid.grid-cols-1.md\\:grid-cols-3 {
-                grid-template-columns: 1fr !important;
-            }
-
-            .kpi-card {
-                padding: 1.25rem !important;
-            }
-
-            .kpi-card h2 {
-                font-size: 1.75rem !important;
-            }
-
-            .kpi-card p {
-                font-size: 0.8rem !important;
-            }
-
-            /* Charts Mobile */
-            .h-64 {
-                height: 250px !important;
-            }
-
-            canvas {
-                max-height: 250px !important;
-            }
-
-            /* Factura Analysis Grid Mobile */
-            .grid.grid-cols-1.md\\:grid-cols-2 {
-                grid-template-columns: 1fr !important;
-            }
-
-            .grid.grid-cols-2.gap-4 {
-                grid-template-columns: 1fr !important;
-            }
-
-            /* Savings Card Mobile */
-            .bg-gradient-to-r {
-                padding: 1.25rem !important;
-            }
-
-            /* Environmental Impact Mobile */
-            .bg-gradient-to-r.from-green-50 {
-                flex-direction: column !important;
-                gap: 15px !important;
-                padding: 1.5rem !important;
-            }
-
-            .border-l {
-                border-left: none !important;
-                border-top: 1px solid #d1fae5 !important;
-                padding-top: 15px !important;
-                padding-left: 0 !important;
-            }
-
-            /* Table Mobile */
-            table {
-                font-size: 0.7rem !important;
-            }
-
-            th,
-            td {
-                padding: 6px 3px !important;
-                font-size: 0.65rem !important;
-            }
-
-            /* Titles Mobile */
-            h1 {
-                font-size: 1.25rem !important;
-            }
-
-            h2 {
-                font-size: 1.1rem !important;
-            }
-
-            h3 {
-                font-size: 1rem !important;
-            }
-
-            h4 {
-                font-size: 0.9rem !important;
-            }
-
-            /* Input Fields Mobile */
-            .excel-input {
-                font-size: 0.85rem !important;
-                padding: 0.4rem !important;
-            }
-
-            select,
-            input[type="number"] {
-                font-size: 0.85rem !important;
-            }
-
-            /* Labels Mobile */
-            label {
-                font-size: 0.7rem !important;
-            }
-
-            /* Buttons Mobile */
-            button {
-                padding: 10px 15px !important;
-                font-size: 0.85rem !important;
-            }
-
-            /* Container Padding Mobile */
-            .container {
-                padding-left: 12px !important;
-                padding-right: 12px !important;
-            }
-
-            .px-4 {
-                padding-left: 0.75rem !important;
-                padding-right: 0.75rem !important;
-            }
-
-            .p-6 {
-                padding: 1.25rem !important;
-            }
-
-            /* Spacing Mobile */
-            .space-y-6>*+* {
-                margin-top: 1.25rem !important;
-            }
-
-            .gap-6 {
-                gap: 1rem !important;
-            }
-
-            .gap-8 {
-                gap: 1.25rem !important;
-            }
-        }
-
-        /* Tablet Responsive (769px - 1024px) */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .main-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .lg\\:col-span-4,
-            .lg\\:col-span-8 {
-                grid-column: span 1 !important;
-            }
-
-            nav .container {
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-        }
-
-        /* Small Mobile (max-width: 480px) */
-        @media (max-width: 480px) {
-            nav h1 {
-                font-size: 0.95rem !important;
-            }
-
-            nav p {
-                font-size: 0.55rem !important;
-            }
-
-            .kpi-card h2 {
-                font-size: 1.5rem !important;
-            }
-
-            .text-3xl {
-                font-size: 1.5rem !important;
-            }
-
-            .text-2xl {
-                font-size: 1.25rem !important;
-            }
-
-            .text-xl {
-                font-size: 1rem !important;
-            }
-
-            .text-lg {
-                font-size: 0.95rem !important;
-            }
-
-            table {
-                font-size: 0.6rem !important;
-            }
-
-            th,
-            td {
-                padding: 4px 2px !important;
-                font-size: 0.6rem !important;
-            }
-
-            /* Hide some columns on very small screens */
-            #colDeuda {
-                display: none !important;
-            }
         }
     </style>
 </head>
@@ -525,11 +260,13 @@
                     title="Descargar Manual de Uso">
                     <i class="fas fa-book"></i> Manual de Uso
                 </a>
-                <!-- Button Removed -->
+                <button type="button" onclick="window.print()"
+                    class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-5 py-2 rounded-lg font-bold shadow-lg transition inline-flex items-center gap-2 text-sm">
+                    <i class="fas fa-file-pdf"></i> PDF / Imprimir
+                </button>
             </div>
         </div>
     </nav>
-
 
     <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-6 main-grid">
 
@@ -553,7 +290,6 @@
                                 <option value="ind">Industrial (+20% Contrib.)</option>
                             </select>
                         </div>
-
                         <div>
                             <label class="text-xs font-bold text-slate-500 uppercase">Consumo Promedio (kWh/mes)</label>
                             <input type="number" id="consumoMensual" value="1200" min="0"
@@ -561,26 +297,29 @@
                             <p class="text-[10px] text-gray-400 mt-1">Revise el promedio de los últimos 6 meses en su
                                 factura.</p>
                         </div>
-
                         <div class="grid grid-cols-2 gap-3">
-                            <div>
-                                <label class="text-xs font-bold text-slate-500">Tarifa (COP/kWh)</label>
-                                <input type="number" id="tarifa" value="900" class="excel-input">
-                            </div>
-                            <div>
-                                <label class="text-xs font-bold text-slate-500">Comercializacion ($/kWh)</label>
-                                <input type="number" id="costoComp" value="200" class="excel-input"
-                                    title="Valor que descuenta el operador por comercializar">
-                            </div>
+                            <div><label class="text-xs font-bold text-slate-500">Tarifa ($/kWh)</label><input
+                                    type="number" id="tarifa" value="950" class="excel-input"></div>
+                            <div><label class="text-xs font-bold text-slate-500">Comercialización ($/kWh)</label><input
+                                    type="number" id="costoComp" value="280" class="excel-input"></div>
                         </div>
-
                         <div>
                             <label class="text-xs font-bold text-slate-500">Aseo y Alumbrado ($)</label>
                             <input type="number" id="costoAseo" value="55000"
                                 class="excel-input bg-orange-50 border-orange-200">
                         </div>
 
-                        <div class="pt-3 border-t border-dashed border-gray-300">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase text-blue-600">Escenario de
+                                Análisis</label>
+                            <select id="escenarioAnalisis" class="excel-input" onchange="calcularDimensionado()">
+                                <option value="factura" selected>Consumo promedio de Factura</option>
+                                <option value="cero">Consumo promedio cero</option>
+                            </select>
+                        </div>
+
+                        <div id="divAutoconsumoSection"
+                            class="pt-3 border-t border-dashed border-gray-300 transition-all duration-300">
                             <div class="flex justify-between items-center mb-1">
                                 <label class="text-xs font-bold text-blue-800">% Autoconsumo</label>
                                 <span class="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded"
@@ -588,18 +327,15 @@
                             </div>
                             <input type="range" id="pctAutoconsumo" min="0" max="100" value="60" step="5">
                             <div class="flex justify-between text-[10px] text-gray-400 mt-1">
-                                <span>Exportación Total (Créditos de Energia)</span>
-                                <span>Consumo Total</span>
+                                <span>Exportación Total (Créditos de Energía)</span><span>Consumo Total</span>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-slate-800 text-sm uppercase">2. Ingeniería</h3>
+                        <h3 class="font-bold text-slate-800 text-sm uppercase">2. Ingeniería-CAPEX-O&M</h3>
                         <i class="fas fa-tools text-blue-500 bg-blue-100 p-1.5 rounded-full"></i>
                     </div>
                     <div class="space-y-3">
@@ -618,7 +354,23 @@
                             </select>
                             <input type="hidden" id="hsp" value="4.6">
                         </div>
+
                         <div>
+                            <label class="text-xs font-bold text-slate-500">Potencia por panel Solar (W)</label>
+                            <input type="number" id="potPanelW" value="580" class="excel-input"
+                                oninput="calcularDimensionado()">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 text-green-700">¿Cómo definir el Costo del
+                                Proyecto?</label>
+                            <select id="metodoValoracion" class="excel-input" onchange="toggleMetodoValoracion()">
+                                <option value="estimado" selected>Valor estimado según tecnología</option>
+                                <option value="manual">Ingresar Valor de la oferta</option>
+                            </select>
+                        </div>
+
+                        <div id="divTecnologia">
                             <label class="text-xs font-bold text-slate-500">Tecnología</label>
                             <select id="tipoTecnologia" class="excel-input" onchange="calcularDimensionado()">
                                 <option value="string">Inversor Central (String)</option>
@@ -626,6 +378,26 @@
                                 <option value="hibrido">Híbrido + Batería LFP</option>
                             </select>
                             <p id="txtPrecioRef" class="text-[10px] text-green-600 mt-1 text-right font-bold"></p>
+                        </div>
+
+                        <div id="divValorManual" class="hidden">
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="text-xs font-bold text-slate-500 text-blue-700">Costo del Proyecto
+                                        (CAPEX) $</label>
+                                    <input type="number" id="inputValorManual" value="20000000"
+                                        class="excel-input bg-blue-50 font-bold text-blue-900 border-blue-200"
+                                        oninput="calcularDimensionado()">
+                                </div>
+                                <div>
+                                    <label class="text-xs font-bold text-slate-500 text-blue-700">O&M (Limpieza de
+                                        Modulos Solares) Primer Año $</label>
+                                    <input type="number" id="inputOMManual" value="300000"
+                                        class="excel-input bg-blue-50 font-bold text-blue-900 border-blue-200"
+                                        oninput="calcularDimensionado()">
+                                </div>
+                                <p class="text-[9px] text-gray-400 mt-1">Ingrese los valores totales antes de IVA.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -635,7 +407,6 @@
                         <h3 class="font-bold text-slate-800 text-sm uppercase">3. Parámetros Financieros</h3>
                         <i class="fas fa-coins text-green-500 bg-green-100 p-1.5 rounded-full"></i>
                     </div>
-
                     <div class="space-y-4">
                         <div>
                             <label class="text-xs font-bold text-slate-500 uppercase">Modalidad de Pago</label>
@@ -644,44 +415,31 @@
                                 <option value="credito">Crédito Bancario</option>
                             </select>
                         </div>
-
                         <div id="divCredito"
                             class="hidden bg-slate-50 p-3 rounded-lg border border-slate-200 transition-all">
                             <div class="grid grid-cols-2 gap-2 mb-2">
-                                <div>
-                                    <label class="text-[10px] font-bold text-slate-500">% Financiado</label>
-                                    <input type="number" id="pctFinanciado" value="80" class="excel-input text-xs">
-                                </div>
-                                <div>
-                                    <label class="text-[10px] font-bold text-slate-500">Tasa E.A. %</label>
-                                    <input type="number" id="tasaInteres" value="22" class="excel-input text-xs">
-                                </div>
+                                <div><label class="text-[10px] font-bold text-slate-500">% Financiado</label><input
+                                        type="number" id="pctFinanciado" value="80" class="excel-input text-xs"></div>
+                                <div><label class="text-[10px] font-bold text-slate-500">Tasa E.A. %</label><input
+                                        type="number" id="tasaInteres" value="22" class="excel-input text-xs"></div>
                             </div>
-                            <div>
-                                <label class="text-[10px] font-bold text-slate-500">Plazo Crédito: <span
-                                        id="lblPlazo">5</span> Años</label>
-                                <input type="range" id="plazoCredito" min="1" max="10" value="5" step="1"
+                            <div><label class="text-[10px] font-bold text-slate-500">Plazo Crédito: <span
+                                        id="lblPlazo">5</span> Años</label><input type="range" id="plazoCredito" min="1"
+                                    max="10" value="5" step="1"
                                     oninput="document.getElementById('lblPlazo').innerText=this.value; calcularDimensionado();">
                             </div>
                         </div>
-
                         <div class="grid grid-cols-2 gap-3">
-                            <div>
-                                <label class="text-xs font-bold text-slate-500">Incremento Tarifa (%/Año)</label>
-                                <input type="number" id="incremento" value="8" class="excel-input">
-                            </div>
-                            <div>
-                                <label class="text-xs font-bold text-slate-500">IPC (Inflación %/Año)</label>
-                                <input type="number" id="ipc" value="5" class="excel-input">
-                            </div>
+                            <div><label class="text-xs font-bold text-slate-500">Incremento Tarifa
+                                    Energia(%/Año)</label><input type="number" id="incremento" value="8"
+                                    class="excel-input"></div>
+                            <div><label class="text-xs font-bold text-slate-500">IPC (Inflación %/Año)</label><input
+                                    type="number" id="ipc" value="5" class="excel-input"></div>
                         </div>
-
                         <div class="bg-green-50 p-3 rounded-lg border border-green-100">
-                            <div class="flex items-center gap-2 mb-2">
-                                <input type="checkbox" id="checkIncentivos" checked
-                                    class="h-4 w-4 text-green-600 rounded">
-                                <label class="text-xs font-bold text-green-800">Incentivos Ley 1715</label>
-                            </div>
+                            <div class="flex items-center gap-2 mb-2"><input type="checkbox" id="checkIncentivos"
+                                    checked class="h-4 w-4 text-green-600 rounded"><label
+                                    class="text-xs font-bold text-green-800">Incentivos Ley 1715</label></div>
                             <div id="divIncentivos" class="grid grid-cols-2 gap-2">
                                 <div><label class="text-[10px] text-green-700 font-bold">Renta %</label><input
                                         type="number" id="tasaImpuesto" value="35" class="excel-input text-xs h-8">
@@ -701,19 +459,21 @@
 
         <div class="lg:col-span-8 space-y-6">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="kpi-card p-5 rounded-xl border-l-4 border-yellow-400">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Sistema Solar</p>
                             <h2 class="text-3xl font-bold text-slate-800" id="resPotencia">0 kWp</h2>
                             <p class="text-sm text-slate-600 mt-1"><i class="fas fa-th mr-1 text-yellow-500"></i> <span
-                                    id="resPaneles">0</span> Módulos 580W</p>
+                                    id="resPaneles">0</span> Módulos</p>
+                            <p class="text-[10px] text-slate-400 mt-0.5 font-medium"><i
+                                    class="fas fa-ruler-combined mr-1"></i> Área Aprox: <span id="resArea">0</span> m²
+                            </p>
                         </div>
                         <i class="fas fa-sun text-2xl text-yellow-200"></i>
                     </div>
                 </div>
-
                 <div class="kpi-card p-5 rounded-xl border-l-4 border-green-500">
                     <div class="flex justify-between items-start">
                         <div>
@@ -725,12 +485,29 @@
                         <i class="fas fa-chart-line text-2xl text-green-200"></i>
                     </div>
                 </div>
+                <div class="kpi-card p-5 rounded-xl border-l-4 border-blue-600 bg-blue-50">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs text-blue-500 uppercase font-bold tracking-wider">Valor Oferta (CAPEX)</p>
+                            <h2 class="text-3xl font-bold text-blue-900" id="resInversion">$0</h2>
+                            <div id="infoCredito" class="hidden mt-2 pt-2 border-t border-blue-200">
+                                <p class="text-[10px] text-blue-600 uppercase font-bold">Plan Financiación:</p>
+                                <p class="text-xs text-slate-700 flex justify-between"><span>Inicial (Equity):</span>
+                                    <strong id="valEquity">$0</strong>
+                                </p>
+                                <p class="text-sm text-blue-800 flex justify-between mt-1"><span>Cuota Mes:</span>
+                                    <strong id="valCuota">$0</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fas fa-tag text-2xl text-blue-200"></i>
+                    </div>
+                </div>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 page-break">
-                <h3 class="font-heading font-bold text-lg text-slate-800 mb-6 flex items-center gap-2">
-                    <i class="fas fa-file-invoice-dollar text-blue-600"></i> Análisis de Facturación (CREG 174)
-                </h3>
+                <h3 class="font-heading font-bold text-lg text-slate-800 mb-6 flex items-center gap-2"><i
+                        class="fas fa-file-invoice-dollar text-blue-600"></i> Análisis de Facturación (CREG 174)</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="relative h-64 w-full"><canvas id="chartFactura"></canvas></div>
                     <div class="space-y-4">
@@ -743,34 +520,32 @@
                             <div class="p-3 rounded-lg border bg-orange-50 text-center">
                                 <p class="text-xs text-orange-600 font-bold uppercase mb-1">Excedentes</p>
                                 <p class="text-lg font-extrabold text-orange-900" id="valExcedentes">$0</p>
-                                <p class="text-[9px] text-orange-400">Créditos de Energía</p>
+                                <p class="text-[9px] text-orange-400" id="lblExcedentesDesc">Créditos de Energía</p>
                             </div>
                         </div>
 
                         <div
-                            class="bg-gradient-to-r from-slate-900 to-slate-800 p-4 rounded-xl shadow-lg border border-slate-700 relative overflow-hidden group">
+                            class="bg-slate-900 p-5 rounded-xl shadow-lg border border-slate-700 relative overflow-hidden flex flex-col justify-center h-28">
                             <div
-                                class="absolute right-[-15px] top-[-10px] text-yellow-500/10 text-8xl transform rotate-12 z-0">
+                                class="absolute right-0 top-0 text-white/5 text-7xl transform rotate-12 pointer-events-none -translate-y-2 translate-x-2">
                                 <i class="fas fa-piggy-bank"></i>
                             </div>
+                            <div class="absolute top-4 right-5">
+                                <i class="fas fa-piggy-bank text-yellow-400 text-sm piggy-animate"></i>
+                            </div>
 
-                            <div class="relative z-10 flex justify-between items-center">
-                                <div>
-                                    <p
-                                        class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2 whitespace-nowrap">
-                                        Ahorro Mensual Total</p>
-                                    <div class="flex items-center gap-2">
-                                        <div class="text-emerald-400 text-xs font-bold flex items-center gap-1">
-                                            <span id="valPctAhorro">0%</span>
-                                        </div>
-                                        <span class="text-[10px] text-slate-400">Reducción Factura</span>
+                            <div class="relative z-10 w-full flex items-end justify-between">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[11px] text-slate-400 font-bold uppercase tracking-wider whitespace-nowrap"
+                                        id="lblAhorroTitle">AHORRO MENSUAL TOTAL</p>
+                                    <div class="flex items-center gap-2" id="divPorcentajeAhorro">
+                                        <span class="text-xl font-bold text-emerald-400" id="valPctAhorro">0%</span>
+                                        <span class="text-[10px] text-slate-500" id="lblReduccion">Reducción
+                                            Factura</span>
                                     </div>
                                 </div>
-                                <div class="text-right">
-                                    <div class="flex justify-end mb-1">
-                                        <i class="fas fa-piggy-bank text-yellow-400 text-xl piggy-animate"></i>
-                                    </div>
-                                    <p class="text-3xl font-extrabold text-yellow-400 tracking-tight"
+                                <div>
+                                    <p class="text-4xl font-extrabold text-yellow-400 tracking-tight leading-none"
                                         id="valAhorroTotal">$0</p>
                                 </div>
                             </div>
@@ -811,27 +586,27 @@
                 <div class="h-64 w-full"><canvas id="chartFlujo"></canvas></div>
             </div>
 
-            <!-- Table Removed -->
-
-            <div class="print-only mt-8 pt-8 border-t-2 border-gray-200">
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="font-bold text-sm mb-2">Notas:</h4>
-                        <ul class="text-[10px] text-gray-600 list-disc list-inside space-y-1">
-                            <li>Oferta preliminar sujeta a visita técnica.</li>
-                            <li>Generación estimada con base en Atlas IDEAM.</li>
-                            <li>Garantía Paneles: 25 años potencia lineal.</li>
-                            <li>Garantía Inversor: 10 años estándar.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col justify-end text-center">
-                        <div class="border-b border-black w-3/4 mx-auto mb-2"></div>
-                        <p class="text-xs font-bold">Aprobado Cliente</p>
-                        <p class="text-[10px] text-gray-500">CC / NIT:</p>
-                    </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 overflow-hidden break-after">
+                <h3 class="font-heading font-bold text-slate-800 mb-4 text-sm uppercase">Detalle Financiero (Proyección
+                    25 Años)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-right border-collapse">
+                        <thead class="bg-slate-50 text-slate-600 uppercase font-semibold border-b border-slate-200">
+                            <tr>
+                                <th class="p-3 text-center">Año</th>
+                                <th class="p-3" id="thAhorroEnergia">Ahorro Energía</th>
+                                <th class="p-3 text-green-700 bg-green-50">Benef. Trib.</th>
+                                <th class="p-3 text-red-600">O&M</th>
+                                <th class="p-3 text-red-600 bg-red-50" id="colDeuda">Pago Deuda</th>
+                                <th class="p-3 font-bold bg-slate-100">Flujo Neto</th>
+                                <th class="p-3 font-bold">Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaBody" class="text-slate-600 divide-y divide-slate-100"></tbody>
+                    </table>
                 </div>
+                <p class="text-[10px] text-gray-400 mt-3 italic">*Estudio preliminar sujeto a visita técnica.</p>
             </div>
-
         </div>
     </div>
 
@@ -839,7 +614,6 @@
         const formatCOP = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 });
         let chartFlujoInstance = null, chartFacturaInstance = null;
 
-        // MATRIZ DE PRECIOS CALIBRADA 2025 (COP/kWp)
         const PRECIOS_BASE = {
             string: { small: 3950000, medium: 3350000, large: 2950000 },
             micro: { small: 4850000, medium: 4400000, large: 4100000 },
@@ -861,12 +635,28 @@
         function toggleFinanciamiento() {
             const tipo = document.getElementById('tipoFinanciamiento').value;
             const div = document.getElementById('divCredito');
+            const colDeuda = document.getElementById('colDeuda');
             if (tipo === 'credito') {
                 div.classList.remove('hidden');
-                // document.getElementById('colDeuda').style.display = 'table-cell'; // Element removed
+                if (colDeuda) colDeuda.style.display = 'table-cell';
             } else {
                 div.classList.add('hidden');
-                // document.getElementById('colDeuda').style.display = 'none'; // Element removed
+                if (colDeuda) colDeuda.style.display = 'none';
+            }
+            calcularDimensionado();
+        }
+
+        function toggleMetodoValoracion() {
+            const metodo = document.getElementById('metodoValoracion').value;
+            const divTec = document.getElementById('divTecnologia');
+            const divMan = document.getElementById('divValorManual');
+
+            if (metodo === 'manual') {
+                divTec.classList.add('hidden');
+                divMan.classList.remove('hidden');
+            } else {
+                divTec.classList.remove('hidden');
+                divMan.classList.add('hidden');
             }
             calcularDimensionado();
         }
@@ -892,18 +682,21 @@
             const tarifa = parseFloat(document.getElementById('tarifa').value) || 0;
             const costoComp = parseFloat(document.getElementById('costoComp').value) || 0;
             const costoFijo = parseFloat(document.getElementById('costoAseo').value) || 0;
-            let pctAutoconsumo = parseFloat(document.getElementById('pctAutoconsumo').value) / 100;
-            const hsp = parseFloat(document.getElementById('hsp').value);
+            let pctAutoconsumo = parseFloat(document.getElementById('pctAutoconsumo').value) / 100 || 0;
+            const hsp = parseFloat(document.getElementById('hsp').value) || 4.6;
             const tipoTecnologia = document.getElementById('tipoTecnologia').value;
             const tipoCliente = document.getElementById('tipoCliente').value;
+            const escenario = document.getElementById('escenarioAnalisis').value;
+            const metodoVal = document.getElementById('metodoValoracion').value;
+            const potPanelW = parseFloat(document.getElementById('potPanelW').value) || 580;
 
             // Financieros
             const tipoFin = document.getElementById('tipoFinanciamiento').value;
-            const infE = parseFloat(document.getElementById('incremento').value) / 100;
-            const ipc = parseFloat(document.getElementById('ipc').value) / 100;
+            const infE = parseFloat(document.getElementById('incremento').value) / 100 || 0;
+            const ipc = parseFloat(document.getElementById('ipc').value) / 100 || 0;
             const applyTax = document.getElementById('checkIncentivos').checked;
-            const taxRate = parseFloat(document.getElementById('tasaImpuesto').value) / 100;
-            const anosDeduc = parseFloat(document.getElementById('anosDeduc').value);
+            const taxRate = parseFloat(document.getElementById('tasaImpuesto').value) / 100 || 0;
+            const anosDeduc = parseFloat(document.getElementById('anosDeduc').value) || 0;
 
             // Contribución
             const pagaContrib = ['res5', 'com', 'ind'].includes(tipoCliente);
@@ -913,22 +706,33 @@
             if (tipoTecnologia === 'hibrido' && pctAutoconsumo < 0.9) { pctAutoconsumo = 0.95; document.getElementById('pctAutoconsumo').value = 95; }
 
             // DIMENSIONAMIENTO
-            const panelW = 580;
             const pr = tipoTecnologia === 'micro' ? 0.82 : 0.78;
             const genEspecifica = hsp * 365 * pr;
             const potReq = (consumoMes * 12) / genEspecifica;
-            const numPaneles = Math.ceil((potReq * 1000) / panelW);
-            const potInstaladaKw = (numPaneles * panelW) / 1000;
+            const numPaneles = Math.ceil((potReq * 1000) / potPanelW);
+            const potInstaladaKw = (numPaneles * potPanelW) / 1000;
             const genAnual = potInstaladaKw * genEspecifica;
 
-            // CAPEX
-            let costoUnitario = 0;
-            const preciosTec = PRECIOS_BASE[tipoTecnologia];
-            if (potInstaladaKw < 6) costoUnitario = preciosTec.small;
-            else if (potInstaladaKw < 20) costoUnitario = preciosTec.medium;
-            else costoUnitario = preciosTec.large;
-            const inversion = potInstaladaKw * costoUnitario;
-            document.getElementById('txtPrecioRef').innerText = `Ref: ${formatCOP.format(costoUnitario)}/kWp`;
+            const areaRequerida = (potInstaladaKw * 5).toFixed(1);
+
+            // CAPEX & O&M (LOGICA FLEXIBLE)
+            let inversion = 0;
+            let oymBase = 0; // Costo O&M Año 1
+
+            if (metodoVal === 'manual') {
+                inversion = parseFloat(document.getElementById('inputValorManual').value) || 0;
+                oymBase = parseFloat(document.getElementById('inputOMManual').value) || 0;
+                document.getElementById('txtPrecioRef').innerText = "";
+            } else {
+                let costoUnitario = 0;
+                const preciosTec = PRECIOS_BASE[tipoTecnologia];
+                if (potInstaladaKw < 6) costoUnitario = preciosTec.small;
+                else if (potInstaladaKw < 20) costoUnitario = preciosTec.medium;
+                else costoUnitario = preciosTec.large;
+                inversion = potInstaladaKw * costoUnitario;
+                oymBase = inversion * 0.01; // 1% del CAPEX por defecto
+                document.getElementById('txtPrecioRef').innerText = `Ref: ${formatCOP.format(costoUnitario)}/kWp`;
+            }
 
             // FINANCIACIÓN
             let flujoInicial = -inversion;
@@ -937,27 +741,24 @@
             let equity = inversion;
 
             if (tipoFin === 'credito') {
-                const pctFin = parseFloat(document.getElementById('pctFinanciado').value) / 100;
-                const tasaEA = parseFloat(document.getElementById('tasaInteres').value) / 100;
-                plazoDeuda = parseFloat(document.getElementById('plazoCredito').value);
+                const pctFin = parseFloat(document.getElementById('pctFinanciado').value) / 100 || 0;
+                const tasaEA = parseFloat(document.getElementById('tasaInteres').value) / 100 || 0;
+                plazoDeuda = parseFloat(document.getElementById('plazoCredito').value) || 0;
 
                 const montoDeuda = inversion * pctFin;
                 equity = inversion - montoDeuda;
-                flujoInicial = -equity; // El cliente solo desembolsa la cuota inicial
+                flujoInicial = -equity;
 
-                // PMT Cálculo
                 const tasaMes = Math.pow(1 + tasaEA, 1 / 12) - 1;
                 const nMeses = plazoDeuda * 12;
                 const cuotaMes = (montoDeuda * tasaMes) / (1 - Math.pow(1 + tasaMes, -nMeses));
                 cuotaAnualDeuda = cuotaMes * 12;
 
-                // Mostrar Info Crédito
-                // Mostrar Info Crédito (Removed from UI)
-                // document.getElementById('infoCredito').classList.remove('hidden');
-                // document.getElementById('valEquity').innerText = formatCOP.format(equity);
-                // document.getElementById('valCuota').innerText = formatCOP.format(cuotaMes);
+                document.getElementById('infoCredito').classList.remove('hidden');
+                document.getElementById('valEquity').innerText = formatCOP.format(equity);
+                document.getElementById('valCuota').innerText = formatCOP.format(cuotaMes);
             } else {
-                // document.getElementById('infoCredito').classList.add('hidden');
+                document.getElementById('infoCredito').classList.add('hidden');
             }
 
             // FLUJO DE CAJA
@@ -967,44 +768,84 @@
             let dataAcum = [acumulado];
             let payback = 0;
 
-            // Datos Factura Año 1
             let ahorroMes1Auto = 0, ahorroMes1Exc = 0, facturaActual1 = 0, facturaNueva1 = 0;
 
             const totalBeneficioFiscal = applyTax ? (inversion * 1.5 * taxRate) : 0;
-            const beneficioAnual = totalBeneficioFiscal / anosDeduc;
+            const beneficioAnual = (anosDeduc > 0) ? (totalBeneficioFiscal / anosDeduc) : 0;
+
+            // DOM Elements
+            const lblExcedentes = document.getElementById('lblExcedentesDesc');
+            const lblAhorro = document.getElementById('lblAhorroTitle');
+            const divPorcentaje = document.getElementById('divPorcentajeAhorro');
+            const thTablaAhorro = document.getElementById('thAhorroEnergia');
+            const divAutoconsumoSection = document.getElementById('divAutoconsumoSection');
+            const lblReduccion = document.getElementById('lblReduccion');
 
             for (let t = 1; t <= 25; t++) {
                 let genT = genAnual * Math.pow(1 - 0.0055, t - 1);
                 let tarifaT = tarifa * Math.pow(1 + infE, t - 1);
                 let costoCompT = costoComp * Math.pow(1 + infE, t - 1);
 
-                // --- Ahorros ---
-                let energiaAuto = genT * pctAutoconsumo;
-                let energiaExc = genT * (1 - pctAutoconsumo);
+                let ahorroTotalAnual = 0;
+                let valAuto = 0;
+                let valExc = 0;
 
-                let valAuto = energiaAuto * tarifaT * (1 + tasaContrib);
-                let valExc = energiaExc * Math.max(0, tarifaT - costoCompT); // Sin contribución
-                let ahorroTotalAnual = valAuto + valExc;
+                if (escenario === 'cero') {
+                    if (t === 1) {
+                        lblExcedentes.innerText = "Excedentes Tipo 2";
+                        lblAhorro.innerText = "INGRESO MENSUAL";
+                        divPorcentaje.style.display = 'none';
+                        if (thTablaAhorro) thTablaAhorro.innerText = "Ingreso Anual";
+                        divAutoconsumoSection.style.display = 'none';
+                        if (lblReduccion) lblReduccion.style.display = 'none';
+                    }
+                    let precioBolsaT = 250 * Math.pow(1 + infE, t - 1);
+                    valExc = genT * precioBolsaT;
+                    ahorroTotalAnual = valExc;
 
-                // --- Facturación Visual Año 1 ---
-                if (t === 1) {
-                    let facBase = ((consumoMes * 12) * tarifaT * (1 + tasaContrib)) + (costoFijo * 12);
-                    let consumoRedNeto = Math.max(0, (consumoMes * 12) - energiaAuto);
-                    let facNueva = (consumoRedNeto * tarifaT * (1 + tasaContrib)) - valExc + (costoFijo * 12);
+                    if (t === 1) {
+                        ahorroMes1Auto = 0;
+                        ahorroMes1Exc = valExc / 12;
+                        facturaActual1 = costoFijo;
+                        facturaNueva1 = costoFijo;
+                    }
+                } else {
+                    if (t === 1) {
+                        lblExcedentes.innerText = "Créditos de Energía";
+                        lblAhorro.innerText = "AHORRO MENSUAL TOTAL";
+                        divPorcentaje.style.display = 'flex';
+                        if (thTablaAhorro) thTablaAhorro.innerText = "Ahorro Energía";
+                        divAutoconsumoSection.style.display = 'block';
+                        if (lblReduccion) lblReduccion.style.display = 'inline';
+                    }
+                    let energiaAuto = genT * pctAutoconsumo;
+                    let energiaExc = genT * (1 - pctAutoconsumo);
+                    valAuto = energiaAuto * tarifaT * (1 + tasaContrib);
+                    valExc = energiaExc * Math.max(0, tarifaT - costoCompT);
+                    ahorroTotalAnual = valAuto + valExc;
 
-                    ahorroMes1Auto = valAuto / 12; ahorroMes1Exc = valExc / 12;
-                    facturaActual1 = facBase / 12; facturaNueva1 = Math.max(costoFijo, facNueva / 12);
+                    if (t === 1) {
+                        let facBase = ((consumoMes * 12) * tarifaT * (1 + tasaContrib)) + (costoFijo * 12);
+                        let consumoRedNeto = Math.max(0, (consumoMes * 12) - energiaAuto);
+                        let facNueva = (consumoRedNeto * tarifaT * (1 + tasaContrib)) - valExc + (costoFijo * 12);
+                        ahorroMes1Auto = valAuto / 12; ahorroMes1Exc = valExc / 12;
+                        facturaActual1 = facBase / 12; facturaNueva1 = Math.max(costoFijo, facNueva / 12);
+                    }
                 }
 
-                // --- Egresos ---
-                let mant = (inversion * 0.01) * Math.pow(1 + ipc, t - 1);
-                if (t === 12 && tipoTecnologia === 'string') mant += (inversion * 0.10) * Math.pow(1 + ipc, t - 1);
-                if (t === 12 && tipoTecnologia === 'hibrido') mant += (inversion * 0.25) * Math.pow(1 + ipc, t - 1);
+                // --- Egresos (O&M Proyectado) ---
+                let mant = oymBase * Math.pow(1 + ipc, t - 1);
 
-                // --- Deuda ---
+                // Costo extra por cambio de inversor/bateria (Solo si es Estimado Automatico)
+                if (metodoVal === 'estimado') {
+                    if (t === 12 && tipoTecnologia === 'string') mant += (inversion * 0.10) * Math.pow(1 + ipc, t - 1);
+                    if (t === 12 && tipoTecnologia === 'hibrido') mant += (inversion * 0.25) * Math.pow(1 + ipc, t - 1);
+                }
+
+                // Deuda
                 let pagoDeuda = (tipoFin === 'credito' && t <= plazoDeuda) ? cuotaAnualDeuda : 0;
 
-                // --- Beneficios ---
+                // Beneficios
                 let benefT = (applyTax && t <= anosDeduc) ? beneficioAnual : 0;
 
                 let flujoNeto = ahorroTotalAnual - mant - pagoDeuda + benefT;
@@ -1018,7 +859,6 @@
                     payback = (t - 1) + (Math.abs(prev) / flujoNeto);
                 }
 
-                // Render Tabla Completa (25 Años)
                 let styleDeuda = tipoFin === 'credito' ? '' : 'display:none';
                 htmlTabla += `<tr class="border-b hover:bg-gray-50">
                     <td class="p-3 text-center font-bold text-gray-500">${t}</td>
@@ -1033,18 +873,21 @@
 
             // Calculo de % Ahorro
             let pctAhorro = 0;
-            if (facturaActual1 > 0) pctAhorro = (facturaActual1 - facturaNueva1) / facturaActual1;
+            if (escenario === 'factura' && facturaActual1 > 0) {
+                pctAhorro = (facturaActual1 - facturaNueva1) / facturaActual1;
+            }
             document.getElementById('valPctAhorro').innerText = (pctAhorro * 100).toFixed(1) + '%';
 
             // Render UI
             document.getElementById('resPotencia').innerText = potInstaladaKw.toFixed(2) + " kWp";
-            document.getElementById('resPaneles').innerText = numPaneles;
-            // document.getElementById('resInversion').innerText = formatCOP.format(inversion); // Element removed
+            document.getElementById('resPaneles').innerText = numPaneles + ` Módulos ${potPanelW}W`;
+            document.getElementById('resArea').innerText = areaRequerida;
+            document.getElementById('resInversion').innerText = formatCOP.format(inversion);
             document.getElementById('resPayback').innerText = payback > 0 ? payback.toFixed(1) + " Años" : ">25";
 
-            let tir = calculateIRR([-equity, ...flujos.slice(1)]); // TIR sobre Equity
+            let tir = calculateIRR([-equity, ...flujos.slice(1)]);
             document.getElementById('resTIR').innerText = (tir * 100).toFixed(1) + "% E.A.";
-            // document.getElementById('tablaBody').innerHTML = htmlTabla; // Table removed
+            document.getElementById('tablaBody').innerHTML = htmlTabla;
 
             // Ambiental
             let energiaVida = 0; for (let i = 1; i <= 25; i++) energiaVida += genAnual * Math.pow(0.9945, i - 1);
@@ -1079,19 +922,17 @@
             });
         }
 
-        function printPage() {
-            window.print();
-        }
-
-        window.onload = function () { generateId(); toggleFinanciamiento(); };
+        window.onload = function () {
+            generateId();
+            toggleMetodoValoracion();
+            toggleFinanciamiento();
+        };
     </script>
 
-    <!-- Footer Profesional -->
     <footer class="no-print"
         style="background: linear-gradient(to bottom, #0F172A, #020617); color: #94a3b8; padding: 3rem 5% 1.5rem; border-top: 2px solid #F59E0B; margin-top: 3rem;">
         <div
             style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-            <!-- Columna 1: Contacto -->
             <div>
                 <h4
                     style="color: #F59E0B; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px;">
@@ -1109,7 +950,6 @@
                         style="color: #94a3b8; text-decoration: none;">WhatsApp</a></p>
             </div>
 
-            <!-- Columna 2: Enlaces Rápidos -->
             <div>
                 <h4
                     style="color: #F59E0B; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px;">
@@ -1127,7 +967,6 @@
                         style="color: #94a3b8; text-decoration: none; transition: color 0.3s;">Manual de Uso</a></p>
             </div>
 
-            <!-- Columna 3: Servicios -->
             <div>
                 <h4
                     style="color: #F59E0B; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px;">
@@ -1138,7 +977,6 @@
                 <p style="margin: 0.5rem 0; font-size: 0.85rem; line-height: 1.8;">• Consultoría Técnica</p>
             </div>
 
-            <!-- Columna 4: Redes Sociales -->
             <div>
                 <h4
                     style="color: #F59E0B; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 1px;">
@@ -1151,7 +989,6 @@
             </div>
         </div>
 
-        <!-- Copyright -->
         <div
             style="border-top: 1px solid #1e293b; padding-top: 1.5rem; text-align: center; font-size: 0.75rem; color: #64748B;">
             <p style="margin: 0;">&copy; 2025 Yorman Peralta García - Ingeniero Electricista | Matrícula Profesional |
